@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aydin Gursoy - Portfolio</title>
+  <title>Aydin Gursoy - Personal Portfolio</title>
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="port1.png" type="image/x-icon">
@@ -14,14 +14,18 @@
   <link rel="stylesheet" href="style.css">
 
   <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
+  <!-- MAIN -->
   <main>
-    <!-- Sidebar -->
-    <aside class="sidebar">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" data-sidebar>
       <div class="sidebar-info">
         <figure class="avatar-box">
           <img src="aydin.jfif" alt="Aydin" width="80">
@@ -30,150 +34,189 @@
           <h1 class="name">Aydin Gursoy</h1>
           <p class="title">Software Developer</p>
         </div>
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+      </div>
+      <div class="sidebar-info_more">
         <div class="separator"></div>
         <ul class="contacts-list">
-          <li>
-            <ion-icon name="mail-outline"></ion-icon> 
-            <a href="mailto:aydingursoy@icloud.com">aydingursoy@icloud.com</a>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:aydingursoy@icloud.com" class="contact-link">aydingursoy@icloud.com</a>
+            </div>
           </li>
-          <li>
-            <ion-icon name="phone-portrait-outline"></ion-icon> 
-            <a href="tel:+13476565066">+1 (347) 656-5066</a>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+              <a href="tel:+13476565066" class="contact-link">+1 (347) 656-5066</a>
+            </div>
           </li>
-          <li>
-            <ion-icon name="location-outline"></ion-icon> 
-            Staten Island, New York
-          </li>
-          <li>
-            <ion-icon name="link-outline"></ion-icon> 
-            <a href="https://aydingursoy.github.io/Portfolio-Website/" target="_blank">Portfolio Website</a>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>Staten Island, New York, USA</address>
+            </div>
           </li>
         </ul>
+        <div class="separator"></div>
       </div>
     </aside>
 
-    <!-- Main Content -->
+    <!-- MAIN CONTENT -->
     <div class="main-content">
-      <nav>
-        <ul>
-          <li><button data-nav-link>About</button></li>
-          <li><button data-nav-link>Resume</button></li>
-          <li><button data-nav-link>Portfolio</button></li>
+
+      <!-- NAVBAR -->
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <button class="navbar-link active" data-nav-link>About</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
         </ul>
       </nav>
 
-      <!-- About Section -->
-      <section>
-        <h2>About Me</h2>
-        <p>
-          Pursuing a Bachelor of Science in Information Systems with a minor in Cyber Security, I specialize in cybersecurity, software development, and innovative problem-solving.
-        </p>
-        <p>
-          My technical expertise spans Python, Java, SQL, and React. I aim to contribute to cutting-edge solutions in cybersecurity and software engineering.
-        </p>
-      </section>
+      <!-- ABOUT SECTION -->
+      <article class="about active" data-page="about">
+        <header>
+          <h2 class="h2 article-title">About Me</h2>
+        </header>
+        <section class="about-text">
+          <p>
+            Pursuing a Bachelor of Science in Information Systems with a minor in Cyber Security, I have experience in programming languages such as Java, Python, SQL, JavaScript, and C++.
+          </p>
+          <p>
+            My goal is to secure a challenging position in the cybersecurity/software engineering field, leveraging my skills in programming, problem-solving, and collaboration to contribute to cutting-edge solutions.
+          </p>
+        </section>
+      </article>
 
-      <!-- Resume Section -->
-  <article class="resume" data-page="resume">
+      <!-- RESUME -->
+      <article class="resume" data-page="resume">
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
 
-  <header>
-    <h2 class="h2 article-title">Resume</h2>
-  </header>
+        <!-- Education Section -->
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Education</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">CUNY - College of Staten Island</h4>
+              <span>2020 — 2025</span>
+              <p class="timeline-text">
+                Bachelor of Science in Information Systems | Minor in Cyber Security<br>
+                Relevant coursework: Data Structures, Database Management Systems, Network Security and Encryption, Big Data Analytics, Artificial Intelligence, Design and Analysis of Algorithms.
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Year Up</h4>
+              <span>Sep 2023 — Jan 2024</span>
+              <p class="timeline-text">
+                Software Developer Bootcamp<br>
+                Relevant coursework: Back-End Development, Database Development, Front-End Development.
+              </p>
+            </li>
+          </ol>
+        </section>
 
-  <!-- Education Section -->
-  <section class="timeline">
-    <div class="title-wrapper">
-      <div class="icon-box">
-        <ion-icon name="book-outline"></ion-icon>
-      </div>
-      <h3 class="h3">Education</h3>
-    </div>
+        <!-- Experience Section -->
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="briefcase-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Experience</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Morgan Stanley</h4>
+              <span>Jun 2024 — Oct 2024</span>
+              <p class="timeline-text">
+                - Engineered a self-healing automation system to monitor and restart private cloud servers based on Splunk error alerts, improving uptime.<br>
+                - Utilized Docker, Kubernetes, and CI/CD tools to optimize deployment workflows and streamline development processes.<br>
+                - Gained experience with Python, NoSQL, SQL, and other technologies.
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">HeadStarter AI</h4>
+              <span>Aug 2023 — Jan 2024</span>
+              <p class="timeline-text">
+                - Built 5+ AI apps and APIs using NextJS, OpenAI, Pinecone, and StripeAPI, achieving 98% accuracy.<br>
+                - Led teams of 4+ engineers using MVC patterns, managing projects from design to deployment.<br>
+                - Trained by industry experts from Amazon, Bloomberg, and Capital One on Agile and microservice patterns.
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">College of Staten Island</h4>
+              <span>Aug 2022 — Aug 2023</span>
+              <p class="timeline-text">
+                - Monitored and maintained network security, ensuring compliance with policies.<br>
+                - Conducted phishing awareness training for staff and students.<br>
+                - Supported initiatives to safeguard institutional data.
+              </p>
+            </li>
+          </ol>
+        </section>
+      </article>
 
-    <ol class="timeline-list">
-      <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">CUNY - College of Staten Island</h4>
-        <span>2020 — 2025</span>
-        <p class="timeline-text">
-          Bachelor of Science in Information Systems | Minor in Cyber Security<br>
-          Relevant coursework: Data Structures, Database Management Systems, Network Security and Encryption, Big Data Analytics, Artificial Intelligence, Design and Analysis of Algorithms.
-        </p>
-      </li>
-      <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">Year Up</h4>
-        <span>Sep 2023 — Jan 2024</span>
-        <p class="timeline-text">
-          Software Developer Bootcamp<br>
-          Relevant coursework: Back-End Development, Database Development, Front-End Development.
-        </p>
-      </li>
-    </ol>
-  </section>
+      <!-- PORTFOLIO -->
+      <article class="portfolio" data-page="portfolio">
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+        <section class="projects">
+          <ul class="project-list">
+            <li class="project-item">
+              <a href="https://github.com/aydingursoy/python-lib">
+                <figure class="project-img">
+                  <img src="python1.png" alt="Weight Loss Calculator">
+                </figure>
+                <h3 class="project-title">Weight Loss Calculator</h3>
+                <p>A Python project leveraging pandas and matplotlib for data visualization and analysis.</p>
+              </a>
+            </li>
+            <li class="project-item">
+              <a href="https://www.linkedin.com/in/aydingursoy/details/certifications/">
+                <figure class="project-img">
+                  <img src="cert.png" alt="Certifications">
+                </figure>
+                <h3 class="project-title">Certifications</h3>
+                <p>Showcasing my certifications in software engineering and cybersecurity.</p>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </article>
 
-  <!-- Experience Section -->
-  <section class="timeline">
-    <div class="title-wrapper">
-      <div class="icon-box">
-        <ion-icon name="briefcase-outline"></ion-icon>
-      </div>
-      <h3 class="h3">Experience</h3>
-    </div>
-
-    <ol class="timeline-list">
-      <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">Morgan Stanley</h4>
-        <span>Jun 2024 — Oct 2024</span>
-        <p class="timeline-text">
-          - Engineered a self-healing automation system to monitor and restart private cloud servers based on Splunk error alerts, improving uptime.<br>
-          - Utilized Docker, Kubernetes, and CI/CD tools to optimize deployment workflows and streamline development processes.<br>
-          - Gained experience with Python, NoSQL, SQL, and other technologies.
-        </p>
-      </li>
-      <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">HeadStarter AI</h4>
-        <span>Aug 2023 — Jan 2024</span>
-        <p class="timeline-text">
-          - Built 5+ AI apps and APIs using NextJS, OpenAI, Pinecone, and StripeAPI, achieving 98% accuracy.<br>
-          - Led teams of 4+ engineers using MVC patterns, managing projects from design to deployment.<br>
-          - Trained by industry experts from Amazon, Bloomberg, and Capital One on Agile and microservice patterns.
-        </p>
-      </li>
-      <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">College of Staten Island</h4>
-        <span>Aug 2022 — Aug 2023</span>
-        <p class="timeline-text">
-          - Monitored and maintained network security, ensuring compliance with policies.<br>
-          - Conducted phishing awareness training for staff and students.<br>
-          - Supported initiatives to safeguard institutional data.
-        </p>
-      </li>
-    </ol>
-  </section>
-
-
-      <!-- Portfolio Section -->
-      <section>
-        <h2>Portfolio</h2>
-        <ul>
-          <li>
-            <a href="https://github.com/aydingursoy/python-lib">
-              <h3>Weight Loss Calculator</h3>
-              <p>A Python project utilizing pandas and matplotlib for data analysis and visualization.</p>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/aydingursoy/details/certifications/">
-              <h3>Certifications</h3>
-              <p>Explore my certifications showcasing expertise in development and security.</p>
-            </a>
-          </li>
-        </ul>
-      </section>
     </div>
   </main>
 
-  <!-- Scripts -->
+  <!-- Custom Scripts -->
   <script src="script.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 </body>
 
 </html>
+
